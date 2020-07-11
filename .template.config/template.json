@@ -3,7 +3,7 @@
     "author": "Maxi Candelero",
     "classifications": [ "Web", "WebAPI" ],
     "identity": "WebAPI.M.SqlServer",
-    "name": "DDD ASP.NET Core Web API for SQL Server",
+    "name": "ASP.NET Core Web API (DDD)",
     "shortName": "webapi-m-sqlserver",
     "tags": {
       "language": "C#",

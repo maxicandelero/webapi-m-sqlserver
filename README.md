@@ -1,4 +1,11 @@
-# DDD ASP.NET Core Web API Template (SQL Server version) 
+# ASP.NET Core Web API Template (DDD)
+
+This template contain:
+- An attempt to write a clean and maintainable RESTful API.
+- Microsoft SQL Server database provider for Entity Framework Core.
+- AutoMapper as a library to map our domain classes to the presentation layer.
+- Swagger for design and document your API.
+- Some little things that help me and my colleagues on a daily basis.
 
 For now, to install these templates you will need to do the following:
 
@@ -15,6 +22,9 @@ dotnet new webapi-m-sqlserver --ProjectName My.API
 ```
 
 The `--ProjectName` argument is required.
+
+To continue you must configure your `ConnectionStrings`, set the `Default` property in the `appsettings.json` file.
+Then you will need to generate the database (or not), remember your database must be SQL Server, but you can change the provider if you want.
 
 ## Uninstall the template
 
