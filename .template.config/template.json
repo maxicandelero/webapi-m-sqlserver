@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Maxi Candelero",
+    "classifications": [ "Web", "WebAPI" ],
+    "identity": "WebAPI.M.SqlServer",
+    "name": "DDD ASP.NET Core Web API for SQL Server",
+    "shortName": "webapi-m-sqlserver",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "symbols": {
+		"ProjectName": {
+			"type": "parameter",
+			"replaces": "webapi_m_sqlserver",
+			"FileRename": "webapi-m-sqlserver",
+			"isRequired": true
+		}
+	}
+  }
