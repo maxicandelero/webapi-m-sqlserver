@@ -1,15 +1,25 @@
-# DDD ASP.NET Core Web API for SQL Server
+# DDD ASP.NET Core Web API Template (SQL Server version) 
 
-This project was generated with [dotnet new](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+For now, to install these templates you will need to do the following:
 
-## Development server
+- `git clone https://github.com/maxicandelero/webapi-m-sqlserver.git {LocalTempPath}`
+- `dotnet new -i {LocalTempPath}`
 
-Run `dotnet run` for a dev server. Navigate to `http://localhost:{port}/`. The app will automatically reload if you change any of the source files.
+To confirm the templates are installed correctly, type `dotnet new -l`, you should see it in the list of available projects. 
 
-## Build
+## Create a new project
+You can use the following command to create a new project with the name `My.API` in it's own directory.
 
-Run `dotnet build` to build the project. 
-Use the `dotnet publish --configuration Release` for a production build.
+```
+dotnet new webapi-m-sqlserver --ProjectName My.API
+```
+
+The `--ProjectName` argument is required.
+
+## Uninstall the template
+
+Because you installed the template by using a file path, you must uninstall it with the absolute file path. You can see a list of templates installed by running the `dotnet new -u` command. Your template should be listed last. Use the path listed to uninstall your template with the `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` command.
+
 
 
 
