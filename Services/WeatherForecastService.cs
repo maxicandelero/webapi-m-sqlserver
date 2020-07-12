@@ -58,7 +58,7 @@ namespace webapi_m_sqlserver.Services
                     // Update properties
                     dbEntity.Date = entity.Date;
 	                dbEntity.TemperatureC = entity.TemperatureC;
-                    dbEntity.Summary = entity.Summary;
+                    dbEntity.Continent = entity.Continent;
 
                     _weatherForecastRepository.Update(dbEntity);
                 }

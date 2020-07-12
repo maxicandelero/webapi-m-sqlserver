@@ -1,16 +1,13 @@
 namespace webapi_m_sqlserver.Domain.Models
 {
-    public enum Summaries
+    public enum Continents
     {
-       Freezing = 1, 
-       Bracing, 
-       Chilly, 
-       Cool, 
-       Mild, 
-       Warm, 
-       Balmy, 
-       Hot, 
-       Sweltering, 
-       Scorching
+       Africa = 1, 
+       Antarctica, 
+       Asia, 
+       Europe, 
+       NorthAmerica, 
+       Australia, 
+       SouthAmerica
     }
 }

@@ -11,7 +11,7 @@ namespace webapi_m_sqlserver.Mapping
         {
             // WeatherForecast
             CreateMap<WeatherForecast, WeatherForecastResource>()
-                .ForMember(c => c.SummaryName, opt => opt.MapFrom(src => src.Summary.ToString()));
+                .ForMember(c => c.Summary, opt => opt.MapFrom<WeatherForecastSummaryResolver>());
             CreateMap<ListAsyncResponse<WeatherForecast>, ListAsyncResponse<WeatherForecastResource>>();           
         }
     }

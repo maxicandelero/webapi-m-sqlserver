@@ -49,8 +49,8 @@ namespace webapi_m_sqlserver
 
             // Repositories
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddSingleton<IWeatherForecastRepository, WeatherForecastRepository>();
-            // Service
+            services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
+            // Services
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();
         }
 

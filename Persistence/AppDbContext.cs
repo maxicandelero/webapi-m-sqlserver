@@ -14,7 +14,7 @@ namespace webapi_m_sqlserver.Persistence
             // WeatherForecast
             modelBuilder.Entity<WeatherForecast>().HasKey(f => f.Id);
             modelBuilder.Entity<WeatherForecast>().Property(f => f.Id).IsRequired().ValueGeneratedOnAdd();
-            modelBuilder.Entity<WeatherForecast>().Property(f => f.Summary).IsRequired().HasConversion(x => (int) x, x => (Summaries) x);
+            modelBuilder.Entity<WeatherForecast>().Property(f => f.Continent).IsRequired().HasConversion(x => (int) x, x => (Continents) x);
         }
     }
 }

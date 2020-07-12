@@ -23,7 +23,7 @@ dotnet new webapi-m-sqlserver --ProjectName My.API
 
 The `--ProjectName` argument is required.
 
-To continue you must configure your `ConnectionStrings`, set the `Default` property in the `appsettings.json` file.
+To continue you must execute `dotnet restore` and configure your `ConnectionStrings`, set the `Default` property in the `appsettings.json` file.
 Then you will need to generate the database (or not), remember your database must be SQL Server, but you can change the provider if you want.
 
 ## Uninstall the template

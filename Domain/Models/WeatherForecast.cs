@@ -8,8 +8,6 @@ namespace webapi_m_sqlserver.Domain.Models
         public long Id { get; set; }
         public DateTime Date { get; set; }
         public int TemperatureC { get; set; }
-        public Summaries Summary { get; set; }
-        [NotMapped]
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public Continents Continent { get; set; }
     }
 }
