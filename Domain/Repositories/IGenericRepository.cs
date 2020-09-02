@@ -1,3 +1,5 @@
+using System;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using webapi_m_sqlserver.Domain.Services.Communication;
 
@@ -7,7 +9,8 @@ namespace webapi_m_sqlserver.Domain.Repositories
     {
         Task<ListAsyncResponse<TEntity>> ListAsync(TFilter filter);
         Task AddAsync(TEntity entity);
-        Task<TEntity> FindByIdAsync(long id);
+        Task<TEntity> FindByIdAsync(params object[] keyValues);
         void Update(TEntity entity);
+        Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity,bool>> predicate);
     }
 }

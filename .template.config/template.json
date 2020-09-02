@@ -1,20 +1,36 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "Maxi Candelero",
-    "classifications": [ "Web", "WebAPI" ],
-    "identity": "WebAPI.M.SqlServer",
-    "name": "ASP.NET Core Web API (DDD)",
-    "shortName": "webapi-m-sqlserver",
-    "tags": {
-      "language": "C#",
-      "type": "project"
-    },
-    "symbols": {
-		"ProjectName": {
-			"type": "parameter",
-			"replaces": "webapi_m_sqlserver",
-			"FileRename": "webapi-m-sqlserver",
-			"isRequired": true
-		}
-	}
-  }
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Maxi Candelero",
+  "classifications": [
+    "Web",
+    "WebAPI"
+  ],
+  "identity": "WebAPI.M.SqlServer",
+  "name": "ASP.NET Core Web API (CA)",
+  "shortName": "webapi-m-sqlserver",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "ProjectName": {
+      "type": "parameter",
+      "replaces": "webapi_m_sqlserver",
+      "FileRename": "webapi-m-sqlserver",
+      "isRequired": true
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**",
+            ".vscode/**",
+            ".git/**"
+          ]
+        }
+      ]
+    }
+  ]
+}
