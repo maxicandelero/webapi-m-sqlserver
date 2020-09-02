@@ -1,4 +1,4 @@
-# ASP.NET Core Web API Template (DDD)
+# ASP.NET Core Web API Template (CA)
 
 This template contains:
 - An attempt to write a clean and maintainable RESTful API.
