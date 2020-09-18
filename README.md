@@ -2,10 +2,15 @@
 
 This template contains:
 - An attempt to write a clean and maintainable RESTful API.
-- Microsoft SQL Server database provider for Entity Framework Core.
+- Microsoft SQL Server database provider for Entity Framework Core (feel free to change provider as needed).
 - AutoMapper as a library to map our domain classes to the presentation layer.
 - Swagger to design and document your API.
+- A RabbitMQ optional implementation
+    - The options are commented in 'Startup.cs', feel free to uncomment if you need it (or remove it in another way).
+    - Visit [RabbitMQ](https://www.rabbitmq.com/) for more information. 
 - Some little things that help me and my colleagues on a daily basis.
+
+Suggestions for improvements are always welcome!
 
 For now, to install these templates you will need to do the following:
 
