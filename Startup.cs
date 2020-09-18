@@ -8,9 +8,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using webapi_m_sqlserver.Domain.Repositories;
 using webapi_m_sqlserver.Domain.Services;
+using webapi_m_sqlserver.Domain.Services.Background;
 using webapi_m_sqlserver.Persistence;
 using webapi_m_sqlserver.Persistence.Repositories;
 using webapi_m_sqlserver.Services;
+using webapi_m_sqlserver.Services.Background;
 
 namespace webapi_m_sqlserver
 {
@@ -36,7 +38,7 @@ namespace webapi_m_sqlserver
 
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
-            //Swagger
+            // Swagger
              services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -46,6 +48,13 @@ namespace webapi_m_sqlserver
                         Description = "ASP.NET Core Web API Template (DDD)",
                     });
             });
+            // Configure strongly typed settings object
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
+            // MQClient - Uncomment the next line if you implement RabbitMQ (or other) to send messages, and inject IMQClient on your services.
+            // services.AddSingleton<IMQClient, RabbitMQClient>();
+            // MQ Background Services - Example to configure a hosted service to receive messages, uncomment and change the implementation for your propose.
+            // services.AddHostedService<ExampleListener>();
 
             // Repositories
             services.AddScoped<IUnitOfWork, UnitOfWork>();
