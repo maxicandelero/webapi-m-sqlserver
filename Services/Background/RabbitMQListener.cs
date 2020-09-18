@@ -9,7 +9,7 @@ using RabbitMQ.Client.Events;
 
 namespace webapi_m_sqlserver.Services.Background
 {
-    public class RabbitMQListener : BackgroundService
+    public abstract class RabbitMQListener : BackgroundService
     {
         private readonly IConnection _connection;
         private readonly IModel _channel;
