@@ -37,15 +37,18 @@ namespace webapi_m_sqlserver.Services.Background
 
         public virtual void PushMessage(string topic, object message)
         {
-            _channel.ExchangeDeclare(exchange: "my.exchange", type: ExchangeType.Topic);
-            var msgJson = JsonConvert.SerializeObject(message);
-            var body = Encoding.UTF8.GetBytes(msgJson);
-            _channel.BasicPublish(
-                exchange: "my.exchange",
-                routingKey: topic,
-                basicProperties: null,
-                body: body
-            );
+            if (_channel != null)
+            {
+                _channel.ExchangeDeclare(exchange: "my.exchange", type: ExchangeType.Topic);
+                var msgJson = JsonConvert.SerializeObject(message);
+                var body = Encoding.UTF8.GetBytes(msgJson);
+                _channel.BasicPublish(
+                    exchange: "my.exchange",
+                    routingKey: topic,
+                    basicProperties: null,
+                    body: body
+                );
+            }
         }
     }
 }
